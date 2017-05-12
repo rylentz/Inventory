@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:tools="http://schemas.android.com/tools"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:layout_margin="@dimen/activity_margin"
+              android:orientation="horizontal">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            style="@style/EditorFieldStyle"
+            android:text="@string/item_name"/>
+
+        <TextView
+            style="@style/EditorFieldStyle"
+            android:text="@string/item_quantity"/>
+
+        <TextView
+            style="@style/EditorFieldStyle"
+            android:text="@string/item_price"/>
+
+        <TextView
+            style="@style/EditorFieldStyle"
+            android:text="@string/item_description"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <EditText
+            android:id="@+id/name_edit_text"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:inputType="text"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/minus_button"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:background="@drawable/ic_minus"/>
+
+            <EditText
+                android:id="@+id/quantity_edit_text"
+                android:layout_width="40dp"
+                android:layout_height="match_parent"
+                android:background="@android:color/transparent"
+                android:inputType="number"
+                android:textAlignment="center"
+                android:textSize="20sp"
+                tools:text="@string/zero"/>
+
+            <Button
+                android:id="@+id/add_button"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:background="@drawable/ic_add"/>
+
+        </LinearLayout>
+
+        <EditText
+            android:id="@+id/price_edit_text"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:inputType="numberDecimal"/>
+
+        <EditText
+            android:id="@+id/description_edit_text"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:ellipsize="end"
+            android:inputType="textMultiLine"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/save_button"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:backgroundTint="#00c853"
+                android:text="@string/save_item"/>
+
+            <Button
+                android:id="@+id/delete_button"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:backgroundTint="#d50000"
+                android:text="@string/delete_item"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>
